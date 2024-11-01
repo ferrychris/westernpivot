@@ -4,6 +4,7 @@ const admin = require('firebase-admin');
 
 admin.initializeApp();
 const db = admin.firestore();
+alert("reat")
 
 exports.exchangeAuthCode = functions.https.onRequest(async (req, res) => {
     const authorizationCode = req.body.code;
