@@ -11,9 +11,9 @@ exports.exchangeAuthCode = functions.https.onRequest(async (req, res) => {
     try {
         const response = await axios.post('https://oauth2.googleapis.com/token', {
             code: authorizationCode,
-            client_id: 'YOUR_CLIENT_ID',
-            client_secret: 'YOUR_CLIENT_SECRET',
-            redirect_uri: 'YOUR_REDIRECT_URI',
+            client_id: '4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com',
+            client_secret: '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',
+            redirect_uri: 'https://westernpivot.netlify.app/auth/callback',
             grant_type: 'authorization_code',
         });
 
