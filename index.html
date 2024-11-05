@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Login</title>
+    <script src="./index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js"></script>
+
+<!-- Axios for HTTP Requests -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <h2>Login with Google</h2>
-    <a
-      href="https://accounts.google.com/o/oauth2/v2/auth?
-      client_id=4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com&
-      redirect_uri=https://westernpivot.netlify.app/auth/callback&
-      response_type=code&
-      scope=https://www.googleapis.com/auth/adwords&
-      access_type=offline&
-      prompt=consent
-      "
-    >
-      <button>Login with Google</button>
-    </a>
+    <button onclick="startOAuth()">Login with Google</button>
   </body>
 </html>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login</title>
-</head>
-<body>
-    <h2>Login with Google</h2>
-    <a href="https://accounts.google.com/o/oauth2/v2/auth?4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com=4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com&https://westernpivot.netlify.app/auth/callback=https://westernpivot.netlify.app/auth/callback&response_type=code&scope=https://www.googleapis.com/auth/adwords&access_type=offline&prompt=consent">
-        <button>Login with Google</button>
-    </a>
-</body>
+
+<script>
+  const clientId = '4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com';
+  const redirectUri = 'https://western-pivot-375509.cloudfunctions.net/exchangeCodeForTokens';
+  const scope = 'https://www.googleapis.com/auth/userinfo.email';
+
+  function startOAuth() {
+      const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}&access_type=offline&prompt=consent`;
+
+      window.location.href = authUrl;
+  }
+</script>
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js'
+
+  // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+  import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js'
+
+  // Add Firebase products that you want to use
+  import { getAuth } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js'
+  import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js'
+</script>
+
 </html>
-https://accounts.google.com/o/oauth2/v2/auth?4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com=4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com&https://westernpivot.netlify.app/auth/callback=https://westernpivot.netlify.app/auth/callback&response_type=code&scope=https://www.googleapis.com/auth/adwords&access_type=offline&prompt=consent
 
-
->>>>>>> 5c51e06e950637973bbf046094d32a93ae4d4300
