@@ -7,7 +7,7 @@ $oauth2 = new OAuth2([
     'clientId' => '4680241477-m9pguejepqqevdq85mtfvtm1951k0pqt.apps.googleusercontent.com',
     'clientSecret' => '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',
     'authorizationUri' => 'https://accounts.google.com/o/oauth2/auth',
-    'redirectUri' => 'https://westernpivot.netlify.app/callback.php',
+    'redirectUri' => 'https://ferrychris.github.io/westernpivot/callback.php',
     'tokenCredentialUri' => 'https://oauth2.googleapis.com/token',
 ]);
 
